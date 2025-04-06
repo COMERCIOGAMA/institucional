@@ -1,0 +1,213 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte geral */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Seção Hero (Imagem de fundo com overlay) */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1590779033100-9f60a05a013d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+
+}
+
+/* Overlay escuro */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Conteúdo acima do overlay */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-img {
+    width: 60%;
+    height: auto;
+}
+
+
+
+/* Lista horizontal de redes sociais */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-left: -2%;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-size: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Ícone de Localização */
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-link i {
+    font-size: 24px;
+}
+
+/* Seções gerais */
+.section {
+    text-align: center;
+
+}
+
+.section h2 {
+    font-size: 36px;
+
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilo do Mapa */
+.map-container {
+    height: 90vh;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+
+}
+
+#localidade {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-container {
+    height: 100%;
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px;
+    }
+
+
+    .logo-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+
+    header nav ul li {
+        font-size: 16px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    .icon-link i {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
